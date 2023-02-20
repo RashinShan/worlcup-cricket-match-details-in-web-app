@@ -1,0 +1,242 @@
+<html>
+<head>
+<style>
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: hsl(0, 0%, 94%);  
+}  
+
+button {   
+       background-color: hsl(0, 20%, 50%);  
+       border: none;
+  color: white;
+  padding: 14px 40px;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  float:left 100%;
+  cursor: pointer;
+  border-radius: 12px;
+         } 
+button:hover {   
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),
+		0 6px 20px 0 rgba(0,0,0,0.19);
+        opacity: 0.7;   
+    }
+h1 {
+            margin: 10px auto;
+            text-align: center;
+            color: hsl(0, 100%, 25%);
+            font-size: 3em;
+            transition: 0.5s;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+
+        table{
+         
+  margin-left: auto;
+  margin-right: auto;
+}
+        
+</style>
+</head>
+<body>
+
+  
+
+
+
+</br>
+<button onclick="location.href = 'frontpage'"; type="match">Home</button>
+<button onclick="location.href = 'Match'"; type="match">Match</button>
+<button onclick="location.href = 'Adminloging'"; type="adminloging">Log AS Admin</button>
+
+</br>
+
+<h1>Match details </h1>
+
+
+<table border="1">
+  <tr>
+    <th>Match id</th>
+    <th>Date</th>
+    <th>Number of Goles</th>
+    <th>Type</th>
+    <th>Duration</th>
+    <th>Team id</th>
+    <th>Stadium id</th>
+  </tr>
+ 
+
+    
+  <% if(matches.length> 0){ %>
+    <% for(var i=0;i<matches.length;i++){ %>
+     
+     
+      <tr>  
+<td> <%- matches[i].MatchID %></td>
+<td><%- matches[i].Date %></td>
+<td><%- matches[i].NumberofGoals %></td>
+<td><%- matches[i].Type %></td>
+<td><%- matches[i].Duration %></td>
+<td><%- matches[i].TeamID%></td>
+<td><%- matches[i].StadiumID %></td>
+
+  </tr>
+  <% } %>
+  <% } else { %>
+    <h1>match data not found</h1>
+    <% } %>
+
+
+</table>
+<h1> stadium details </h1>
+<table border="1">
+  <tr>
+    <th>Stadium id</th>
+    <th>Name</th>
+    <th>TournamentID</th>
+    <th>MatchID</th>
+    <th>Country ID</th>
+    
+  </tr>
+ 
+
+    
+  <% if(stadium.length> 0){ %>
+    <% for(var i=0;i<stadium.length;i++){ %>
+     
+     
+      <tr>  
+<td> <%-stadium[i].StadiumID  %></td>
+<td><%-stadium[i].Name %></td>
+<td><%-stadium[i].TournamentID  %></td>
+<td><%-stadium[i].MatchID  %></td>
+<td><%-stadium[i].CountryID %></td>
+
+
+  </tr>
+  <% } %>
+  <% } else { %>
+    <h1>Stadium data not found</h1>
+    <% } %>
+
+
+</table>
+
+
+
+
+<h1>country details</h1>
+
+
+<table border="1">
+  <tr>
+    <th>CountryID</th>
+    <th>Name</th>
+    <th>Players</th>
+    <th>TournamentID</th>
+    <th>TeamID</th>
+    <th>Stadium id</th>
+  </tr>
+ 
+
+    
+  <% if(country.length> 0){ %>
+    <% for(var i=0;i<country.length;i++){ %>
+     
+     
+      <tr>  
+<td> <%- country[i].CountryID %></td>
+<td><%-country[i].Name %></td>
+<td><%- country[i].Players %></td>
+<td><%- country[i].TournamentID %></td>
+<td><%- country[i].TeamID%></td>
+<td><%- country[i].StadiumID %></td>
+
+  </tr>
+  <% } %>
+  <% } else { %>
+    <h1>city data not found</h1>
+    <% } %>
+
+
+</table>
+
+
+<h1>Player details</h1>
+
+
+<table border="1">
+  <tr>
+    <th>TeamID</th>
+    <th>Name</th>
+    <th>NumberOfPlayers</th>
+    <th>MatchID</th>
+    <th>TournamnetID</th>
+    <th>Player Captain</th>
+    
+  </tr>
+ 
+
+    
+  <% if(team.length> 0){ %>
+    <% for(var i=0;i<team.length;i++){ %>
+     
+     
+      <tr>  
+<td> <%- team[i].TeamID %></td>
+<td><%-team[i].Name %></td>
+<td><%- team[i].NumberofPlayers %></td>
+<td><%- team[i].MatchID %></td>
+<td><%-team[i].TournamnetID%></td>
+<td><%- team[i].Player_captain %></td>
+
+  </tr>
+  <% } %>
+  <% } else { %>
+    <h1>team data not found</h1>
+    <% } %>
+
+
+</table>
+
+<h1> player_captain details </h1>
+<table border="1">
+  <tr>
+    <th>PlayerID</th>
+    <th>Name</th>
+    <th>Role</th>
+    <th>TeamID</th>
+    <th>year</th>
+  
+  </tr>
+ 
+
+    
+  <% if(player_captain.length> 0){ %>
+    <% for(var i=0;i<player_captain.length;i++){ %>
+     
+     
+      <tr>  
+<td> <%-player_captain[i].PlayerID  %></td>
+<td><%-player_captain[i].Name %></td>
+<td><%-player_captain[i].Role  %></td>
+<td><%-player_captain[i].TeamID  %></td>
+<td><%-player_captain[i].Year %></td>
+
+
+  </tr>
+  <% } %>
+  <% } else { %>
+    <h1>player captain data not found</h1>
+    <% } %>
+
+
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>
+</title>
+<style>
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: hsl(0, 60%, 50%);  
+}  
+h1 {
+            margin: 10px auto;
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            transition: 0.5s;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+button {   
+       background-color: hsl(0, 60%, 50%);  
+       border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+         }   
+ form {   
+        border: 3px solid #f1f1f1; 
+border-radius: 12px;		
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid white;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px; 
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: darkred;  
+		border-radius: 12px;
+    }   
+</style>
+</head>
+<body>
+<h1 align="center" style="color:White">Admin login</h1>
+</br>
+
+<button onclick="location.href = 'frontpage'"; type="match">Home</button>
+<button onclick="location.href = 'Match'"; type="match">Match</button>
+<button onclick="location.href = 'Adminloging'"; type="Adminloging">Log AS Admin</button>
+
+</br>
+<form  action="/adminloging" method="post" class="login">
+<div class="container"> 
+<label for="username" style="color:White">Username</label><input type="text" placeholder="Enter username" id="username" name="username" autocomplete="on" required/>
+</br>
+<label for="password" style="color:White">Password</label><input type="password" placeholder="Enter Password" id="password" name="password" autocomplete="off" required/>
+<table  align="center">
+<tr>
+<td align="center"><input type="checkbox" checked="checked"> Remember me </td>
+</tr> 
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Login"> </td>
+</tr>
+
+</table>
+</div>
+</form>
+</body>
+</html>

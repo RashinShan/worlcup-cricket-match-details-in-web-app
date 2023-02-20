@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <title>
+  </title>
+  <style>
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: hsl(0, 60%, 50%);
+    }
+
+    h1 {
+      margin: 10px auto;
+      text-align: center;
+      color: white;
+      font-size: 3em;
+      transition: 0.5s;
+      font-family: Copperplate, Papyrus, fantasy;
+    }
+
+    
+
+    
+
+    
+   
+   
+  </style>
+</head>
+
+<body>
+  <h1>Admin page</h1>
+  </br>
+
+  <button onclick="location.href = 'frontpage'" ; type="match">Home</button>
+  <button onclick="location.href = 'Match'" ; type="match">Match</button>
+  <button onclick="location.href = 'Adminloging'" ; type="Adminloging">Log AS Admin</button>
+
+  </br>
+  <h1> enter match details</h1>
+  <form action="/addmatchesdata" method="post">
+  <table>
+    <tr><td> MatchID</td><td><input type="text"  name="MatchID" required></td></tr>
+    <tr><td>Date</td><td><input type="text" placeholder="YYYY-MM-DD" name="Date" required></td></tr>
+    <tr><td> NumberofGoals</td><td><input type="text"  name="NumberofGoals" required></td></tr>
+    <tr><td>Type</td><td><input type="text"  name="Type" required></td></tr>
+    <tr><td> Duration</td><td><input type="text"  name="Duration" required></td> </tr>
+    <tr><td> TeamID </td><td><input type="text"  name="TeamID" required></td> </tr>
+    <tr> <td> StadiumID</td><td><input type="text"  name="StadiumID" required></td></tr>
+    <tr><td> <input type="submit" value="Submit"></td></tr>
+  </table>
+</form>
+
+  <h1> delete match details</h1>
+  <form action="/delmatchesdata" method="post">
+  <table>
+    <tr><td> MatchID</td><td><input type="text"  name="MatchID" required></td></tr>
+    <tr><td> <input type="submit" value="Delete"></td></tr>
+  </table>
+</form>
+
+
+
+<h1> enter stadium details</h1>
+  <form action="/addstadiumdata" method="post">
+  <table>
+    <tr><td> StadiumID</td><td><input type="text"  name="StadiumID" required></td></tr>
+    <tr><td>Name</td><td><input type="text"  name="Name" required></td></tr>
+    <tr><td>TournamentID</td><td><input type="text"  name="TournamentID" required></td></tr>
+    <tr><td> Duration</td><td><input type="text"  name="Duration" required></td> </tr>
+    <tr><td> MatchID </td><td><input type="text"  name="MatchID" required></td> </tr>
+    <tr> <td> CountryID</td><td><input type="text"  name="CountryID" required></td></tr>
+    <tr><td> <input type="submit" value="Submit"></td></tr>
+  </table>
+</form>
+
+  <h1> delete Stadium details</h1>
+  <form action="/delstadiumdata" method="post">
+  <table>
+    <tr><td> StadiumID</td><td><input type="text"  name="StadiumID" required></td></tr>
+    <tr><td> <input type="submit" value="Delete"></td></tr>
+  </table>
+</form>
+
+
+
+
+<h1> enter country details</h1>
+  <form action="/addcountrydata" method="post">
+  <table>
+    <tr><td> CountryID</td><td><input type="text"  name="CountryID" required></td></tr>
+    <tr><td>Name</td><td><input type="text"  name="Name" required></td></tr>
+    <tr><td>Players</td><td><input type="text"  name="Players" required></td></tr>
+    <tr><td> TournamentID</td><td><input type="text" " name="TournamentID" required></td> </tr>
+    <tr><td> TeamID </td><td><input type="text"  name="TeamID" required></td> </tr>
+    <tr> <td> StadiumID</td><td><input type="text"  name="StadiumID" required></td></tr>
+    <tr><td> <input type="submit" value="Submit"></td></tr>
+  </table>
+</form>
+
+  <h1> delete country details</h1>
+  <form action="/delcountrydata" method="post">
+  <table>
+    <tr><td> CountryID</td><td><input type="text"  name="CountryID" required></td></tr>
+    <tr><td> <input type="submit" value="Delete"></td></tr>
+  </table>
+</form>
+
+
+
+
+
+<h1> enter player details</h1>
+  <form action="/addplayerdata" method="post">
+  <table>
+    <tr><td> TeamID</td><td><input type="text"  name="TeamID" required></td></tr>
+    <tr><td>Name</td><td><input type="text"  name="Name" required></td></tr>
+    <tr><td>NumberofPlayers</td><td><input type="text"  name="NumberofPlayers" required></td></tr>
+    <tr><td>MatchID</td><td><input type="text" " name="MatchID" required></td> </tr>
+    <tr><td> 	TournamnetID </td><td><input type="text"  name="TournamnetID " required></td> </tr>
+    <tr> <td> Player_captain</td><td><input type="text"  name="Player_captain" required></td></tr>
+    <tr><td> CountryID</td><td><input type="text"  name="CountryID" required></td></tr>
+    <tr><td> <input type="submit" value="Submit"></td></tr>
+  </table>
+</form>
+
+  <h1> delete player details</h1>
+  <form action="/delplayerdata" method="post">
+  <table>
+    <tr><td> TeamID</td><td><input type="text"  name="TeamID" required></td></tr>
+    <tr><td> <input type="submit" value="Delete"></td></tr>
+  </table>
+</form>
+
+
+<h1> enter playercaptain details</h1>
+  <form action="/addplayercaptaindata" method="post">
+  <table>
+    <tr><td> PlayerID</td><td><input type="text"  name="PlayerID" required></td></tr>
+    <tr><td>Name</td><td><input type="text"  name="Name" required></td></tr>
+    <tr><td>Role</td><td><input type="text"  name="Role" required></td></tr>
+    <tr><td> TeamID </td><td><input type="text"  name="TeamID" required></td> </tr>
+    <tr> <td> Year</td><td><input type="text"  name="Year" required></td></tr>
+    <tr><td> <input type="submit" value="Submit"></td></tr>
+  </table>
+</form>
+
+  <h1> delete match details</h1>
+  <form action="/delplayercaptaindata" method="post">
+  <table>
+    <tr><td> PlayerID</td><td><input type="text"  name="PlayerID" required></td></tr>
+    <tr><td> <input type="submit" value="Delete"></td></tr>
+  </table>
+</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>
+</title>
+<style>
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: hsl(0, 60%, 50%);  
+}  
+h1 {
+            margin: 10px auto;
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            transition: 0.5s;
+            font-family: Copperplate, Papyrus, fantasy;
+        }
+		button {   
+       background-color: hsl(0, 60%, 50%);  
+       border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+         }   
+ form {   
+        border: 3px solid #f1f1f1; 
+border-radius: 12px;		
+    }   
+ input[type=text], input[type=password],input[type=email] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid white;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    }   
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px; 
+    }   
+        
+     
+ .container {   
+        padding: 25px;   
+        background-color: darkred;  
+		border-radius: 12px;
+    }   
+</style>
+</head>
+<body>
+<h1>SIGN UP</h1>
+<form  action="/register" method="post" class="register" >
+<div class="container"> 
+<label for="username" style="color:White">Username</label><input type="text" placeholder="Enter username" name="username" autocomplete="on" required/>
+</br>
+<label for="password" style="color:White">Password</label><input type="password" placeholder="Enter Password" name="password" autocomplete="off" required/>
+</br>
+<label for="email" style="color:White">Email</label><input type="email" placeholder="Enter Email" name="email" autocomplete="on" required/>
+</br>
+<label for="phonenumber" style="color:White">Phone number</label><input type="text" placeholder="Enter Phone number" name="phonenumber" autocomplete="off" required/>
+<table  align="center">
+<tr>
+<td colspan="2" align="center"><input type="submit" value="Register"></td>
+</tr>
+<tr>
+<td align="center"><button onclick="location.href = 'homepage.html'"; type="button" class="cancelbtn"> Cancel</button></td>
+</tr>
+</table>
+</div>
+</form>
+</body>
+</html>
